@@ -13,3 +13,34 @@ To deploy this application on your own sever, clone this repo onto your server a
 
 ## Architecture
 City Explorer is built in React and uses the [LocationIQ API](https://locationiq.com/docs).
+
+
+Name of feature: Site setup
+
+Estimate of time needed to complete: 30 minute
+
+Start time: 1:30ish
+
+Finish time: 2:15ish
+
+Actual time needed to complete: 45 min
+
+------
+
+Name of feature: Form
+
+Estimate of time needed to complete: 30 minute
+
+Start time: 2:30
+
+Finish time: 4:30ish
+
+Actual time needed to complete: I got stuck and broke my form really terribly. Marie helped me sort it out, but it took a while.
+
+------
+
+Name of feature: Render date from LocationIQ
+
+Estimate of time needed to complete: 30 minute
+
+Actual time needed to complete: Well over an hour. Couldn't figure this out tonight
