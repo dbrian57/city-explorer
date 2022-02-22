@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
 class App extends React.Component {
