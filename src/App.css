@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.cityForm {
+  padding: 25px;
+  margin: auto;
+}
+
+Button {
+  margin-left: 10px;
+}
