@@ -58,9 +58,9 @@ class App extends React.Component {
 
     return (
       <>
-        <Form onSubmit={this.handleSubmit}>
+        <Form className="cityForm" onSubmit={this.handleSubmit}>
             <Form.Label>Enter a city to search for: </Form.Label>
-            <Form.Control onChange={this.updateCity} type="text" placeholder="Enter city" />
+            <Form.Control onChange={this.updateCity} type="text" placeholder="Example: Seattle" />
             <Button type="submit">Explore City</Button>
         </Form>
       </>
