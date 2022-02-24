@@ -44,3 +44,13 @@ Name of feature: Render date from LocationIQ
 Estimate of time needed to complete: 30 minute
 
 Actual time needed to complete: Well over an hour. Couldn't figure this out tonight
+
+-------
+Name of feature: Live weather and movies 
+
+Estimate of time needed to complete: 90 minutes 
+
+Start time: 6:00pm (EST) 
+
+Finish time: 7:45pm (EST) Actual time needed to complete: 2 hours
+
