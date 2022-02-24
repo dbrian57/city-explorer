@@ -2,33 +2,45 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './CityCard.css';
 import WeatherCard from './WeatherCard';
+import MovieCard from './MovieCard';
 
 class CityCard extends React.Component {
 
-    render(){
-        let weatherCards = [];
-        this.props.cityWeather.data.forEach((item, index) => {
-            weatherCards.push(
+    render() {
+        let weatherCards = this.props.cityWeather.map((item, index) => (
                 <WeatherCard
                     key={index}
                     date={item.date}
                     description={item.description}
-                    />
+                />
             )
-        })
+        )
+
+        let movieCards = this.props.cityMovies.map((item, index) => (
+                <MovieCard
+                    key={index}
+                    title={item.title}
+                    release_date={item.release_date}
+                    overview={item.overview}
+                />
+            )
+        )
         return (
             <>
                 <Card className="CityCard">
                     <Card.Img variant="top" src=""></Card.Img>
                     <Card.Body>
                         <Card.Title>{this.props.cityName}</Card.Title>
-                        <Card.Text>
                             <div className='coordinates'>
                                 <p>Latitude: {this.props.cityLat}</p>
                                 <p>Longitude: {this.props.cityLong}</p>
+                                <hr></hr>
                             </div>
+                            <div className="forcast">Weather Forcast</div>
                             <div>{weatherCards}</div>
-                        </Card.Text>
+                            <hr></hr>
+                            Movies about this city
+                            <div>{movieCards}</div>
                     </Card.Body>
                 </Card>
             </>
@@ -36,4 +48,4 @@ class CityCard extends React.Component {
     }
 }
 
-    export default CityCard;
+export default CityCard;

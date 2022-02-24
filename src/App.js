@@ -16,15 +16,28 @@ class App extends React.Component {
       cityLat: null,
       cityLong: null,
       cityState: false,
-      cityWeather: []
+      cityWeather: [],
+      weatherError: false,
+      weatherErrorMessage: '',
+      cityMovies: []
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    this.sendRequest();
+    let locationData = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
+    this.setState({
+      cityData: locationData,
+      cityName: locationData.data[0].display_name,
+      cityLat: locationData.data[0].lat,
+      cityLong: locationData.data[0].lon,
+      cityState: true
+    });
+
     this.getWeatherData();
+    this.getMovieData();
   }
+
 
   sendRequest = async () => {
     let locationData = await axios.get(`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
@@ -37,12 +50,20 @@ class App extends React.Component {
     });
     }
 
-    getWeatherData = async () => {
-      let weatherData = await axios.get(`http://localhost:3001/weather?searchQuery=${this.state.city}&lat=${this.state.cityLat}&lon=${this.state.cityLong}`);
-      this.setState({
-        cityWeather: weatherData
-      })
-    }
+  getWeatherData = async () => {
+    let weatherData = await axios.get(`https://city-explorer-api-db.herokuapp.com/weather?searchQuery=${this.state.city}&lat=${this.state.cityLat}&lon=${this.state.cityLong}`);
+    console.log(weatherData.data)
+    this.setState({
+      cityWeather: weatherData.data
+    })
+  }
+
+  getMovieData = async () => {
+    let movieData = await axios.get(`https://city-explorer-api-db.herokuapp.com/movies?searchQuery=${this.state.city}`);
+    this.setState({
+      cityMovies: movieData.data
+    })
+  }
 
   updateCity = (event) => {
     this.setState({
@@ -51,18 +72,17 @@ class App extends React.Component {
   }
 
   render(){ 
-
-    if (this.state.cityState) {
-      return  <CityCard cityName={this.state.cityName} cityLong={this.state.cityLong} cityLat={this.state.cityLat} cityWeather={this.state.cityWeather} />;
-     };
-
     return (
       <>
+      <div className='container'>
+        <div className='siteTitle'>City Explorer</div>
         <Form className="cityForm" onSubmit={this.handleSubmit}>
             <Form.Label>Enter a city to search for: </Form.Label>
             <Form.Control onChange={this.updateCity} type="text" placeholder="Example: Seattle" />
             <Button type="submit">Explore City</Button>
         </Form>
+        <CityCard cityName={this.state.cityName} cityLong={this.state.cityLong} cityLat={this.state.cityLat} cityWeather={this.state.cityWeather} cityMovies={this.state.cityMovies}/>
+      </div>
       </>
       );
     };
