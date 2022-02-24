@@ -10,9 +10,7 @@ class WeatherCard extends React.Component {
                 <Card className="WeatherCard">
                     <Card.Body>
                         <Card.Title>{this.props.date}</Card.Title>
-                        <Card.Text>
                             <div>{this.props.description}</div> 
-                        </Card.Text>
                     </Card.Body>
                 </Card>
             </>

@@ -45,3 +45,15 @@
 Button {
   margin-left: 10px;
 }
+
+.siteTitle {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+.container {
+  margin: auto;
+  width: 70vw;
+  padding: 25px;
+}

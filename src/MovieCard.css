@@ -1,0 +1,16 @@
+.MovieCard {
+    background-color: rgb(163, 113, 213);
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.movieDate {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.movieDesc {
+    font-size: 1.3vw;
+    font-weight: lighter;
+}
