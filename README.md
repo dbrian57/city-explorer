@@ -54,3 +54,13 @@ Start time: 6:00pm (EST)
 
 Finish time: 7:45pm (EST) Actual time needed to complete: 2 hours
 
+--------
+Name of feature: Refactor
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 4:30pm (EST) 
+
+Finish time: 7:00pm (EST) 
+
+Actual time needed to complete: 2 hours
