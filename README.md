@@ -14,6 +14,10 @@ To deploy this application on your own sever, clone this repo onto your server a
 ## Architecture
 City Explorer is built in React and uses the [LocationIQ API](https://locationiq.com/docs).
 
+![Architecture diagram lab 09](https://github.com/dbrian57/city-explorer/blob/main/Lab-09-WRRC-diagram.png)
+![Architecture diagram lab 08](https://github.com/dbrian57/city-explorer/blob/main/Lab-09-WRRC-diagram.png)
+
+-------
 
 Name of feature: Site setup
 
