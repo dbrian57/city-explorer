@@ -38,8 +38,10 @@
 }
 
 .cityForm {
-  padding: 25px;
   margin: auto;
+  width: 50vw;
+  padding-top: 25px;
+  padding-bottom: 20px;
 }
 
 Button {
@@ -55,5 +57,5 @@ Button {
 .container {
   margin: auto;
   width: 70vw;
-  padding: 25px;
+  padding-top: 25px;
 }
