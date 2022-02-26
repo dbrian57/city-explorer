@@ -1,0 +1,10 @@
+.WeatherCard {
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10px;
+  width: 40vw;
+  margin: auto;
+  text-align: center;
+  background-color: #e16716;
+  color: aliceblue;
+}

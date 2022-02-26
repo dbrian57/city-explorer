@@ -14,6 +14,11 @@ To deploy this application on your own sever, clone this repo onto your server a
 ## Architecture
 City Explorer is built in React and uses the [LocationIQ API](https://locationiq.com/docs).
 
+![Architecture diagram lab 10](https://github.com/dbrian57/city-explorer/blob/main/Lab-10-WRRC-diagram.png)
+![Architecture diagram lab 09](https://github.com/dbrian57/city-explorer/blob/main/Lab-09-WRRC-diagram.png)
+![Architecture diagram lab 08](https://github.com/dbrian57/city-explorer/blob/main/Lab-08-WRRC-diagram.png)
+![Architecture diagram lab 07](https://github.com/dbrian57/city-explorer/blob/main/Lab-07-WRRC-diagram.png)
+![Architecture diagram lab 06](https://github.com/dbrian57/city-explorer/blob/main/Lab-06-WRRC-diagram.png)
 
 Name of feature: Site setup
 
@@ -62,5 +67,16 @@ Estimate of time needed to complete: 2 hours
 Start time: 4:30pm (EST) 
 
 Finish time: 7:00pm (EST) 
+
+Actual time needed to complete: 2 hours
+
+--------
+Name of feature: More Modular
+
+Estimate of time needed to complete: 2 hours
+
+Start time: 7:30pm (EST) 
+
+Finish time: 9:00pm (EST) 
 
 Actual time needed to complete: 2 hours
