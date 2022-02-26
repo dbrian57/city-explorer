@@ -1,31 +1,13 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import './CityCard.css';
-import WeatherCard from './WeatherCard';
-import MovieCard from './MovieCard';
+import WeatherCards from './WeatherCards';
+import MovieCards from './MovieCards';
 
 class CityCard extends React.Component {
 
     render() {
 
-        let weatherCards = this.props.cityWeather.map((item, index) => (
-          <WeatherCard
-            key={index}
-            date={item.date}
-            description={item.description}
-          />
-            )
-        )
-
-        let movieCards = this.props.cityMovies.map((item, index) => (
-          <MovieCard
-            key={index}
-            title={item.title}
-            release_date={item.release_date}
-            overview={item.overview}
-          />
-            )
-        )
         return (
             <>
               <Card className="CityCard">
@@ -38,10 +20,10 @@ class CityCard extends React.Component {
                       <hr></hr>
                       </div>
                       <div className="forcast">Weather Forcast</div>
-                      <div>{weatherCards}</div>
+                      <WeatherCards  cityWeather={this.props.cityWeather} />
                       <hr></hr>
                       Movies about this city
-                      <div>{movieCards}</div>
+                      <MovieCards cityMovies={this.props.cityMovies} />
                   </Card.Body>
               </Card>
             </>
