@@ -1,18 +1,16 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 import './MovieCard.css';
 
 class MovieCard extends React.Component {
     render() {
         return (
           <>
-            <Card className="MovieCard">
-              <Card.Body>
-                <Card.Title>{this.props.title}</Card.Title>
-                  <div className="movieDate">Release Date: {this.props.release_date}</div>
-                  <div className="movieDesc">{this.props.overview}</div>
-              </Card.Body>
-            </Card>
+          <ListGroup className="movieCard">
+            <ListGroup.Item className="movieTitle">{this.props.title}</ListGroup.Item>
+            <ListGroup.Item className="movieDate">Release Date: {this.props.release_date}</ListGroup.Item>
+            <ListGroup.Item className="movieDesc">{this.props.overview}</ListGroup.Item>
+          </ListGroup>
           </>
         )
     }

@@ -1,4 +1,4 @@
-.MovieCard {
+.movieCard {
     background-color: rgb(163, 113, 213);
     border: 1px solid black;
     padding: 10px;
@@ -11,6 +11,6 @@
 }
 
 .movieDesc {
-    font-size: 1.1vw;
+    font-size: 10px;
     font-weight: lighter;
 }
